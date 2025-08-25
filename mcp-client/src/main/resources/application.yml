@@ -1,0 +1,23 @@
+spring:
+  main:
+    web-application-type: none
+  ai:
+    #anthropic:
+    #  api-key: ${ANTHROPIC_API_KEY}
+    # 使用anthropic的API付费比较麻烦，改用硅基流动的API（采用OpenAI结构，适用于ChatGPT、DeepSeek等，需要引入OpenAI的Starter）
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: https://api.siliconflow.cn/
+      chat:
+        options:
+          model: Qwen/QwQ-32B
+        completions-path: /v1/chat/completions
+    # 使用ollama的本地模型（需要引入ollama的Starter）
+    #ollama:
+    #  base-url: http://127.0.0.1:11434
+    #  chat:
+    #    model: qwen3:1.7b
+    mcp:
+      client:
+        stdio:
+          servers-configuration: classpath:/mcp-servers-config.json
