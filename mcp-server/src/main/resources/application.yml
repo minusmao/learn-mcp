@@ -1,0 +1,13 @@
+spring:
+  main:
+    # MCP支持多种传输机制，包括Stdio本地进程、SSE网络服务，其中Stdio本地进程的方式会在每次调用Tool时启动一个进程，所以项目不以web类型启动
+    web-application-type: none
+    banner-mode: off
+logging:
+  pattern:
+    console:
+
+# 高德地图API
+amap-api:
+  key: ${AMAP_API_KEY}
+  url: https://restapi.amap.com/v3
