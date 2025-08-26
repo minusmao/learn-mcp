@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: mcp-client
   main:
     web-application-type: none
   ai:
