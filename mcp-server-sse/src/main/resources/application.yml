@@ -1,0 +1,31 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: mcp-server-sse
+  main:
+    web-application-type: reactive
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: mcp-server-sse
+        type: async
+        sse-endpoint: /sse
+        sse-message-endpoint: /mcp/messages
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            logger-level: full
+# 设置日志级别
+logging:
+  level:
+    com.minus.test.mcp.client: debug
+
+# 高德地图API
+amap-api:
+  key: ${AMAP_API_KEY}
+  url: https://restapi.amap.com/v3
+
