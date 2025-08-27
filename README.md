@@ -141,7 +141,7 @@ public HttpMessageConverters httpMessageConverters() {
 }
 ```
 
-测试方式：`Claude Desktop`不支持添加基于SSE的MCP服务器，可以用`Postman`的进行测试
+测试方式：`Claude Desktop`不支持添加基于SSE的MCP服务器，可以用`Postman`进行测试
 
 ### 3.2 MCP客户端（mcp-client-sse）
 
