@@ -110,7 +110,7 @@ sequenceDiagram
     Note over Client, MCP_Server: ④ SSE 长连接持续存在，可接收后续事件
 ```
 
-### 3.2 MCP服务器（mcp-server-sse）
+### 3.1 MCP服务器（mcp-server-sse）
 
 依赖包`spring-ai-starter-mcp-server-webmvc`和`spring-ai-starter-mcp-server-webflux`均可实现基于SSE网络服务的MCP服务器，需要的核心配置如下：
 
@@ -143,7 +143,7 @@ public HttpMessageConverters httpMessageConverters() {
 
 测试方式：`Claude Desktop`不支持添加基于SSE的MCP服务器，可以用`Postman`的进行测试
 
-### 3.1 MCP客户端（mcp-client-sse）
+### 3.2 MCP客户端（mcp-client-sse）
 
 依旧沿用`mcp-client`项目的`spring-ai-starter-mcp-client`依赖包，同时在配置信息中不再配置`stdio`引用
 `mcp-servers-config.json`文件，而是配置`sse`信息，内容如下：
