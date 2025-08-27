@@ -110,7 +110,7 @@ sequenceDiagram
     Note over Client, MCP_Server: ④ SSE 长连接持续存在，可接收后续事件
 ```
 
-### 3.1 MCP服务器（mcp-server-sse）
+### 3.2 MCP服务器（mcp-server-sse）
 
 依赖包`spring-ai-starter-mcp-server-webmvc`和`spring-ai-starter-mcp-server-webflux`均可实现基于SSE网络服务的MCP服务器，需要的核心配置如下：
 
